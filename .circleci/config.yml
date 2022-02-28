@@ -1,0 +1,15 @@
+---
+version: 2.1
+
+# Make sure to enable Project Settings > Advanced > Dynamic Configuration
+# in the CircleCI UI so that this option will work.
+setup: true
+
+orbs:
+  golden: evil-org/golden@1
+
+workflows:
+  setup:
+    jobs:
+      - golden/setup_fastapi_k8s:
+          project_name: SampleApp2
